@@ -26,11 +26,16 @@
 
 <p align="center">
 
-<img src="https://skillicons.dev/icons?i=java,react,js,html,css,git,github,vscode"/>
+<img src="https://skillicons.dev/icons?i=html,css,bootstrap,javascript,typescript,react,java,spring,mysql,idea,vscode" />
 
 </p>
 
----
+<p align="center">
+
+<img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white" />
+
+</p>
+
 
 ## 📊 GitHub Stats
 
