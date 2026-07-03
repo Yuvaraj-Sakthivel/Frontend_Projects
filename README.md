@@ -6,7 +6,7 @@
 
 *"Code. Learn. Build. Repeat."*
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=28&duration=3500&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=Welcome+to+my+GitHub!;Java+Developer;React+Learner;Future+Full+Stack+Engineer;Always+Learning+Something+New..." />
+<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=28&duration=3500&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=Welcome+to+my+GitHub!;Java+Developer;Future+Full+Stack+Engineer;Always+Learning+Something+New..." />
 
 </div>
 
