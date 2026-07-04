@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(240, 239, 237);
+            margin: 0%;
+            padding: 20px;
+        }
+        .heading{
+            text-align: center;
+            margin-bottom: 30px;
+            color: lightslategray;
+            background-color: ivory;
+            
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap:20px
+        }
+        .img{
+            justify-content: center;
+            border-image: 20px solid repeat;
+            border: 2px solid black;
+            text-align: center;
+            background-color: #222;
+            padding: 25px;
+        }
+        .img img:hover{
+            width: 315px;
+            height: 315px;
+        }
+        p{
+            text-align: center;
+            color: blueviolet;
+            text-transform: capitalize;
+        }
+        h2{
+            text-align: center;
+            color: violet;
+            text-transform: uppercase;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="heading">ANIMATIONS</h1>
+    <div class="container">
+        <div class="img">
+            <img src="a.jpg" alt="img loading" width="300" height="300">
+            <h2>itachi</h2>
+            <p>legend sacrificer in leaf village</p>
+        </div>
+        <div class="img">
+            <img src="b.jpg" alt="img loading" width="300"height="300" >
+            <h2>cycle</h2>
+            <p>toy cycle for baby boy</p>
+        </div>
+        <div class="img">
+            <img src="c.jpg" alt="img loading" width="300" height="300">
+            <h2>naruto</h2>
+            <p>hero of the leaf village</p>
+        </div>
+        <div class="img">
+            <img src="d.jpg" alt="img loading" width="300" height="300">
+            <h2>saturo goja</h2>
+            <p>eye to infinity destruction</p>
+        </div>
+    </div>
+</body>
+</html>
