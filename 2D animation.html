@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box img {
+        background-color: aqua;
+        animation: yuva 3s linear infinite;
+        width: 100px;
+        height: 100px;
+        margin: 50px;
+        animation-delay: 3s;
+        animation-duration: 10s;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate-reverse;
+        transform-origin: center;
+             
+
+    }
+    @keyframes yuva{
+      /* 0%{background-color: aqua;transform: translate(0,0);rotate:(40deg);}
+        25%{background-color: blue;transform: translate(0,300px);}
+        50%{background-color: blueviolet;transform: translate(300px,300px);}
+        75%{background-color: red;transform: translate(300px,0);}
+        100% {background-color: yellow;transform: translate(0,0);}*/
+
+       /*from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(300px);
+        }*/
+
+       0%{
+            transform: translate(0px,0px) scale(1) rotate(0deg) skew(0deg);
+            background-color: aqua;
+        }
+
+        25%{
+            transform: translate(300px,0px) scale(1.5) rotate(360deg) skew(10deg);
+            background-color: red;
+        }
+
+        50%{
+            transform: translate(300px,300px) scale(1.8) rotate(0deg) skew(0deg);
+            background-color: black;
+        }
+
+        75%{
+            transform: translate(0px,300px) scale(2) rotate(360deg) skew(-10deg);
+            background-color: green;
+        }
+
+        100%{
+            transform: translate(0px,0px) scale(2.3) rotate(0deg) skew(0deg);
+            background-color: orangered;
+        }
+
+        
+
+
+        
+    }
+</style>
+<body>
+    <div class="box">
+        <img src="2.jpg">
+        <img src="4.jpg">
+        <img src="2.jpg">
+        <img src="4.jpg">
+        <img src="2.jpg">
+         </div>
+</body>
+</html>
