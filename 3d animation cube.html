@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: black;
+        }
+
+        .scene{
+            perspective: 1000px;
+        }
+        .cube{
+            width: 150px;
+            height: 150px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: yuvi 5s infinite linear;
+        }
+        .face{
+            position: absolute;
+            width: 150PX;
+            height: 150px;
+            background: rgba(0, 255, 255, 0.7);
+            border: 2px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: white;
+        }
+
+       .front {transform: translateZ(75px);}
+        .back{transform:rotateY(180deg) translateZ(75px)}
+         .right{transform:rotateY(90deg) translateZ(75px)}
+          .left{transform:rotateY(-90deg) translateZ(75px)}
+           .top{transform:rotateX(90deg) translateZ(75px)}
+            .bottom{transform:rotateX(-90deg) translateZ(75px)}
+
+            @keyframes yuvi{
+                from{
+                    transform: rotateX(0deg) rotateY(0deg);
+            }
+            to{
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="cube">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face left">3</div>
+            <div class="face right">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+        </div>
+    </div>
+</body>
+</html>
