@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Planner</title>
+</head>
+<body>
+    <h1>Diet Planner</h1>
+    <div>
+        <label>Name: </label>
+        <input id="name" type="text" placeholder="Enter Your Name">
+        <label>Age: </label>
+        <input id="age" type="number" placeholder="Enter Your Age">
+    </div>
+
+    <div>
+         <label>Height: </label>
+        <input id="height" type="number" placeholder="Enter Your Height">
+         <label>Weight: </label>
+        <input id="weight" type="number" placeholder="Enter Your Weight">
+        <div >BMI Result:
+            <span id="bmi"></span>
+            <span id="result"></span>
+        </div>
+    </div>
+
+    <div>
+        <label>Goals: </label>
+       <select id="goal">
+       <option>Weight Gain</option>
+       <option>Weight Loss</option>
+       <option>Maintain Weight</option>
+       </select>
+
+
+       <label>Meal:</label>
+       <select id="meal">
+       <option>BreakFast</option>
+       <option>Lunch</option>
+       <option>Dinner</option>   
+       </select>
+
+       <label>Food:</label>
+       <select id="food">
+       <option>Egg</option>
+       <option>Chicken</option>
+       <option>Oats</option>
+       <option>Rice</option>
+       <option>Paneer</option>
+       <option>Banana</option>
+       <option>Raw Vegetables</option>
+       <option>Junk Food</option>
+       <option>Fish</option>
+       <option>Wheat</option>
+       <option>Oily Foods</option>
+       <option>Fruits</option>
+       <option>Juices</option>
+       <option>Preservatives</option>
+       </select>
+
+
+        <label>Calories: </label>
+        <input id="calories" type="number" placeholder="Calories">
+
+
+        <button onclick="btn()">Add Meal</button>
+
+    </div>
+
+
+    <h2>Today's Meals</h2>
+
+    <table>
+        <thead>
+        <tr>
+        <th>Meal Time</th>
+        <th>Food Items</th>
+        <th>Calories</th>
+        <th>Action</th>
+        </tr>
+        </thead>
+
+
+        <tbody id="foodItems">
+
+        </tbody>
+   
+    </table>
+
+
+    <div>
+        Total Calories:<span id="total">0</span>
+    </div>
+
+    <script>
+        
+        const foodItems = document.getElementById("foodItems");
+        const totalCal=document.getElementById("total");
+        let totalCalories = 0;
+
+        function btn(){
+        const name = document.getElementById("name").value;
+        const age = document.getElementById("age").value;
+        const height =Number(document.getElementById("height").value);
+        const weight =Number(document.getElementById("weight").value);
+        const bmi = document.getElementById("bmi");
+        const result = document.getElementById("result");
+        const goal = document.getElementById("goal").value;
+        const meal = document.getElementById("meal").value;
+        const food = document.getElementById("food").value;
+        const calories = Number(document.getElementById("calories").value);
+
+
+
+               totalCalories+=calories; 
+              totalCal.textContent=totalCalories;
+        
+
+            let heightInput=height/100;
+            let bmiMath = weight/(heightInput*heightInput);
+            let bmiResult = Number(bmiMath.toFixed(2));
+            bmi.textContent= bmiResult;
+                        if (bmiResult < 18.5) {
+             result.textContent = "(Underweight)";
+                }
+                        else if (bmiResult >= 18.5 && bmiResult < 25) {
+             result.textContent = "(Normal Weight)";
+                }
+                        else if (bmiResult >= 25 && bmiResult < 30) {
+             result.textContent = "(Overweight)";
+                }
+                        else {
+             result.textContent = "(Obese)";
+                }
+
+            foodItems.innerHTML += `<tr>
+            <td>${meal}</td>
+            <td>${food}</td>
+            <td>${calories}</td>
+            <td><button onClick="deletebtn(this)">Delete</button></td>
+            </tr>`;
+            
+        };
+
+            
+           function deletebtn(button){
+            
+            
+            const row = button.closest("tr");
+            const deletedCalories = Number(
+            row.children[2].textContent
+           );
+            totalCalories-=deletedCalories;
+            totalCal.textContent = totalCalories;
+           button.closest("tr").remove();
+            }
+
+    </script>
+
+</body>
+</html>
