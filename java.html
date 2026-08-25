@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Practice</title>
+</head>
+<body>
+
+  <h1>JavaScript Demo 🚀</h1>
+
+  <!-- Input -->
+  <input type="number" id="num" placeholder="Enter your age">
+
+  <!-- Button -->
+  <button onclick="checkAge()">Check Eligibility</button>
+
+  <!-- Output -->
+  <p id="result"></p>
+
+  <script>
+    function checkAge() {
+
+      // 1. Get input value
+      let age = document.getElementById("num").value;
+
+      // 2. Convert to nmber
+      
+
+      // 3. Condition logic
+      if (age >= 18) {
+        document.getElementById("result").innerHTML = "✅ You are eligible";
+      } else {
+        document.getElementById("result").innerHTML = "❌ Not eligible";
+      }
+
+      // 4. Print in console
+      console.log("User age:", age);
+    }
+  </script>
+
+</body>
+</html>
+</body>
+</html>
