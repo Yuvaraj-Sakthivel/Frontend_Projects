@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class yuva {
+            constructor(name, age){
+                this.name = name ;
+                this.age = age;
+            }
+
+                greet(){
+                    console.log("Welcome  "+this.name);
+                
+                if (this.age >= 18){
+                    console.log("You are eligible to enter");
+                }else{
+                    console.log("Sorry,you are not eligible");
+                }
+
+                }
+        }
+        class sasi extends yuva{
+            constructor(name,age,mobile){
+                super(name,age);
+                this.mobile=mobile;
+            }
+            Mobile(){
+            if(this.age>=18){
+            console.log("Mobile Number: " + this.mobile);
+            }
+        }
+        }
+        let name = prompt("Enter your Name:");
+        let age = parseInt(prompt("Enter your age"));
+        let mobile = prompt("Enter Mobile Number");
+
+        let obj = new sasi(name,age,mobile);
+        console.log(obj);
+        obj.greet();
+        obj.Mobile();
+
+
+    </script>
+</body>
+</html>
