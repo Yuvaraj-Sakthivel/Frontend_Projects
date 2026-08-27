@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      
+function yuva(arr,fn){
+    let x =[];
+    for(i=0;i<arr.length;i++){
+        x.push(fn(arr[i],i));
+
+    }
+    return x;
+}
+    function plusone(n){
+        return n+1;
+    }
+ 
+    function plusI(n,i){
+        return n+i;
+    }
+    function constant(n){
+        return 42;
+    }
+console.log (yuva([1,2,3,4,5,6,7,8,9],plusone));
+console.log (yuva([1,2,3,4,5,6,7,8,9],plusI));
+console.log (yuva([1,2,3,4,5,6,7,8,9],constant));
+   
+
+
+
+
+    </script>
+</body>
+</html>
